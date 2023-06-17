@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Hack NF:pixelsize=15:antialias=true:autohint=true";
+static char *font = "Hack NF:pixelsize=14:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -93,30 +93,51 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
+/* previous colors
+ * -------------------------------------------------------------- */
+/*/1* Terminal colors (16 first used in escape sequence) *1/ */
+/*static const char *colorname[] = { */
+/*    /1* 8 normal colors *1/ */
+/*    "black", "red3", "green3", "yellow3", "blue2", "magenta3", "cyan3", */
+/*    "gray90", */
+
+/*    /1* 8 bright colors *1/ */
+/*    "gray50", "red", "green", "yellow", "#5c5cff", "magenta", "cyan", "white",
+ */
+
+/*    [255] = 0, */
+
+/*    /1* more colors can be added after 255 to use with DefaultXX *1/ */
+/*    "#cccccc", "#555555", "gray90", /1* default foreground colour *1/ */
+/*    "black",                        /1* default background colour *1/ */
+/*}; */
+
+/*/1* */
+/* * Default colors (colorname index) */
+/* * foreground, background, cursor, reverse cursor */
+/* *1/ */
+/*unsigned int defaultfg = 258; */
+/*unsigned int defaultbg = 259; */
+/*unsigned int defaultcs = 256; */
+/* -------------------------------------------------------------- */
+
+/* gruvbox-dark colorscheme */
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-    /* 8 normal colors */
-    "black", "red3", "green3", "yellow3", "blue2", "magenta3", "cyan3",
-    "gray90",
-
-    /* 8 bright colors */
-    "gray50", "red", "green", "yellow", "#5c5cff", "magenta", "cyan", "white",
-
-    [255] = 0,
-
-    /* more colors can be added after 255 to use with DefaultXX */
-    "#cccccc", "#555555", "gray90", /* default foreground colour */
-    "black",                        /* default background colour */
+    "#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
+    "#cc241d", "#98971a", "#d79921", "#458588", "#b16286",
+    "#689d6a", "#a89984", "#928374", "#fb4934", "#b8bb26",
+    "#fabd2f", "#83a598", "#d3869b", "#8ec07c", "#ebdbb2",
 };
 
 /*
  * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
+ * foreground, background, cursor
  */
-unsigned int defaultfg = 258;
-unsigned int defaultbg = 259;
-unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+unsigned int defaultfg = 15;
+unsigned int defaultbg = 0;
+unsigned int defaultcs = 15;
+static unsigned int defaultrcs = 256;
 
 /*
  * Default shape of cursor
