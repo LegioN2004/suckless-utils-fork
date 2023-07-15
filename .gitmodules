@@ -10,3 +10,9 @@
 [submodule "dwm-flexipatch"]
 	path = dwm-flexipatch
 	url = https://github.com/bakkeby/dwm-flexipatch.git
+[submodule "suckless/dmenu"]
+	path = suckless/dmenu
+	url = https://git.suckless.org/dmenu
+[submodule "suckless/slstatus"]
+	path = suckless/slstatus
+	url = https://git.suckless.org/slstatus
